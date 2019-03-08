@@ -1,0 +1,51 @@
+.body, html{
+    overflow-x: hidden;
+  
+  }
+
+  
+/* logo on navbar */
+.img-circle{
+    border-radius: 50%;
+    shape-image-threshold: initial;
+    padding-top: 7pt;
+}
+
+/* navbar content */
+#navbar{
+   background-color: rgb(19, 19, 68);
+   text-align: center;
+   font-size: 210%;
+   z-index: 100;
+
+};
+
+/* Needed to make navbar horizontal */
+#navbar-text{
+    color: white;
+    text-align: center;
+    
+}
+
+
+li{
+    display: inline;
+    text-align: center;
+    padding-left: 5.5%;
+    padding-right: 5.5%;
+
+}
+
+
+
+li a:hover {
+    background-color: rgb(36, 36, 73);
+    padding-top: 4pt;
+    padding-right: 6pt;
+    padding-left: 6pt;
+  }
+
+body{
+    background-color: rgb(207, 250, 250);
+}
+
