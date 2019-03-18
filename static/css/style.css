@@ -19,8 +19,7 @@
    border-radius: 25pt;
    z-index: 200;
    padding-top: 0.25pt;
-   font-style: bold;
-   font-family: 'Avantgarde', 'TeX Gyre Adventor', 'URW Gothic L', sans-serif;
+   font-family: 'Optima', sans-serif;
    
 
 };
@@ -29,11 +28,14 @@
 #navbar-text{
     color: white;
     text-align: center;
-    padding-bottom: 2%;
     
-    
+
 }
 
+nav a{
+    text-decoration: none;
+    padding-left: 1pt;
+}
 
 li{
     display: inline;
@@ -46,10 +48,16 @@ li{
 
 
 li a:hover {
-    background-color: rgb(36, 36, 73);
-    padding-top: 4pt;
-    padding-right: 6pt;
-    padding-left: 6pt;
+    border-top-left-radius: 2pt;
+    border-bottom-left-radius: 2pt;
+    border-top-right-radius: 2pt;
+    border-bottom-right-radius: 2pt;
+    border-top: 1.5pt solid whitesmoke;
+    border-bottom:1.5pt solid whitesmoke;
+    border-left: 1.5pt solid whitesmoke;
+    border-right: 1.5pt solid whitesmoke;
+    text-decoration: none;
+    padding-left: 1pt;
   }
 
 body{
