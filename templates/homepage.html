@@ -6,7 +6,8 @@
     <meta charset="UTF-8">
     <title>By the Blood of Jesus</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.3.1/superhero/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" >
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.1/css/mdb.min.css" />
     <link rel="stylesheet" href="../static/css/style.css">
 
 
@@ -15,26 +16,32 @@
 
   <body>
     <!-- Start of navbar -->
-    <div class="spiderman">
-      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" id="navbar">
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <ul class="nav justify-content-center">
-                <li class="nav-item"> <a class="nav-link active" href="homepage.html"  id="navbar-left" style="color:white" > Home <span class="sr-only"></span><a></li>
-                <li class="nav-item"> <a class="nav-link" href="about.html"  id="navbar-left" style="color:white" > About </a></li>
-                <li class="navbar-brand" href="homepage.html">
-                    <img class="img-circle" src="../static/images/logo.JPEG" width="100" height="100" alt="">
-                </li>               
-                <li class="nav-item"><a class="nav-link" href="gallery.html" id="navbar-text" style="color:white" > Gallery </a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html" id="navbar-text" style="color:white" > Contact </a></li>
-              </ul>
-        </div>
-      </nav>
-      <!-- End of navbar -->
-    </div>
-
+   
+      <!-- Navbar row -->
+      <div class="row">
+        <!-- Navbar column -->
+        <div class="col-8">
+            <ul class="nav flex-column grey lighten-4 py-4" style="list-style: none">
+              <li class="nav-item">
+                <a class="nav-link active" href="#!">Active</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#!">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#!">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#!">Disabled</a>
+              </li>
+            </ul>
+          </div>
+          <!-- End of navbar column -->        
+      </div>
+  </div>
 
     <!-- Footer -->
-<footer class="page-footer font-small mdb-color darken-3 pt-4">
+  <footer class="page-footer font-small blue fixed-bottom text-center">
 
     <!-- Footer Elements -->
     <div class="container">
@@ -46,7 +53,7 @@
         <div class="col-md-6">
 
           <!-- Video -->
-          <div class="embed-responsive embed-responsive-16by9 mb-4">
+          <div class="embed-responsive center embed-responsive-16by9 mb-4">
             <iframe height="300" width="500" class="embed-responsive-item" src="https://www.youtube.com/embed/Dbn8UU4caxs" allowfullscreen></iframe>
           </div>
 
@@ -71,8 +78,32 @@
 
 
   <!-- Bootstrap java tags -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.1/js/mdb.min.js"></script>
+  <!-- carousel -->
+<script>
+    var angle = 0;
+ function galleryspin(sign) { 
+ spinner = document.querySelector("#spinner");
+ if (!sign) { angle = angle + 90; } else { angle = angle - 90; }
+ spinner.setAttribute("style","-webkit-transform: rotateY("+ angle +"deg); -moz-transform: rotateY("+ angle +"deg); transform: rotateY("+ angle +"deg);");
+ }
+</script>
+
+<script>
+  $(document).ready(function() {
+          // Transition effect for navbar 
+          $(window).scroll(function() {
+            // checks if window is scrolled more than 500px, adds/removes solid class
+            if($(this).scrollTop() > 370) { 
+                $('.navbar').addClass('solid');
+            } else {
+                $('.navbar').removeClass('solid');
+            }
+          });
+  });
+</script>
+  
   
   </body>
 

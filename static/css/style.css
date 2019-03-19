@@ -27,7 +27,8 @@
 /* Needed to make navbar horizontal */
 #navbar-text{
     color: white;
-    text-align: center;
+    text-decoration: none;
+  
     
 
 }
@@ -38,10 +39,9 @@ nav a{
 }
 
 li{
-    display: inline;
-    text-align: center;
-    padding-left: 5.5%;
-    padding-right: 5.5%;
+    text-decoration: none;
+    padding-bottom: 0.75%;
+    padding-top: 0.75%;
     
 }
 

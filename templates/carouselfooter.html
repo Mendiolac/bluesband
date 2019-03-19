@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <title>By the Blood of Jesus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.1/css/mdb.min.css" />
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/carousel.css">  
+</head>
+
+
+  <body>
+        <!-- Start of navbar -->
+       
+          <!-- Navbar row -->
+          <div class="row">
+            <!-- Navbar column -->
+            <div class="col-8">
+                <ul class="nav flex-column grey lighten-4 py-4" style="list-style: none">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#!">Active</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#!">Link</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#!">Link</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" href="#!">Disabled</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- End of navbar column -->        
+          </div>
+      </div>
+    
+        <!-- Footer -->
+      <footer class="page-footer font-small blue fixed-bottom justify-content-center">
+    
+        <!-- Footer Elements -->
+        <div class="container-fluid text-center justify-content-center">
+    
+          <!--Grid row-->
+          <div class="row d-flex justify-content-center">
+    
+            <!--Grid column-->
+            <div class="col-md-6">
+        <div id="demo" class="collapse">
+                <div class="container">
+                    <div class="row" id="fancy">
+                        <div class="col align-self-center">
+                            <base href=#>
+                                <div id="carousel">
+                                    <figure id="spinner">
+                                            <!-- 1 -->
+                                            <div class="container">
+                                            <div class="embed-responsive center embed-responsive-16by9 mb-4">
+                                                <iframe height="300" width="500" class="embed-responsive-item" src="https://www.youtube.com/embed/Dbn8UU4caxs" allowfullscreen></iframe>
+                                            </div>
+                                            </div>
+                                            <!-- 2 -->
+                                            <div class="container">
+                                            <div class="embed-responsive center embed-responsive-16by9 mb-4">
+                                                    <iframe height="300" width="500" class="embed-responsive-item" src="https://www.youtube.com/embed/7hacDkZai2g" allowfullscreen></iframe>
+                                            </div>
+                                            </div>
+                                            <!-- 3 -->
+                                            <div class="container">
+                                            <div class="embed-responsive center embed-responsive-16by9 mb-4">
+                                                    <iframe height="300" width="500" class="embed-responsive-item" src="https://www.youtube.com/embed/tpZP6_lKoG4" allowfullscreen></iframe>
+                                            </div>
+                                            </div>
+                                            <!-- 4 -->
+                                            <div class="container">
+                                            <div class="embed-responsive center embed-responsive-16by9 mb-4">
+                                                    <iframe height="300" width="500" class="embed-responsive-item" src="https://www.youtube.com/embed/b4uKA87B-pk" allowfullscreen></iframe>
+                                            </div>
+                                            </div>
+                                            <!-- 5 -->
+                                            <div class="container">
+                                            <div class="embed-responsive center embed-responsive-16by9 mb-4">
+                                                    <iframe height="300" width="500" class="embed-responsive-item" src="https://www.youtube.com/embed/WdbaXYh8xvc" allowfullscreen></iframe>
+                                            </div>
+                                            </div>
+                                            <!-- 6 -->
+                                            <div class="container">
+                                            <div class="embed-responsive center embed-responsive-16by9 mb-4">
+                                                    <iframe height="300" width="500" class="embed-responsive-item" src="https://www.youtube.com/embed/YKRGxdQpDTs" allowfullscreen></iframe>
+                                            </div>
+                                            </div>
+
+                                    </figure>
+                                </div>
+                            <span style="float:left" class="ss-icon" onclick="galleryspin('-')">&lt;</span>
+                        <span style="float:right" class="ss-icon" onclick="galleryspin('')">&gt;</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        </div>
+        <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+        </div>
+        <!-- Footer Elements -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2018 Copyright:
+        <a href="https://www.linkedin.com/in/mendiolac/"> Camille Mendiola</a>
+        </div>
+        <!-- Copyright -->
+
+        </footer>
+        <!-- Footer -->
+
+
+
+<!-- Bootstrap java tags -->
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.1/js/mdb.min.js"></script>
+<!-- carousel -->
+<script>
+var angle = 0;
+function galleryspin(sign) { 
+spinner = document.querySelector("#spinner");
+if (!sign) { angle = angle + 60; } else { angle = angle - 60; }
+spinner.setAttribute("style","-webkit-transform: rotateY("+ angle +"deg); -moz-transform: rotateY("+ angle +"deg); transform: rotateY("+ angle +"deg);");
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  // Transition effect for navbar 
+  $(window).scroll(function() {
+    // checks if window is scrolled more than 500px, adds/removes solid class
+    if($(this).scrollTop() > 370) { 
+        $('.navbar').addClass('solid');
+    } else {
+        $('.navbar').removeClass('solid');
+    }
+  });
+});
+</script>
+
+<script src="https://d3js.org/d3.v5.js"></script>
+
+</body>
+
+
+
+</html>
