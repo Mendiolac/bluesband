@@ -5,10 +5,12 @@
 div#carousel { 
     perspective: 1200px; 
     background: transparent; 
-    padding-top: 10%; 
+    padding-top: 5%; 
+    padding-bottom: 5%;
     font-size:0; 
     margin-bottom: 3rem; 
     overflow: hidden; 
+
   }
 
   #fancy{
@@ -29,6 +31,7 @@ div#carousel {
     position: absolute; left: 30%;
     transform-origin: 50% 50% -500px;
     outline:1px solid transparent; 
+    box-shadow: 10px 10px 10px black;
   }
   figure#spinner .container:nth-child(1) { transform:rotateY(0deg); 
   }

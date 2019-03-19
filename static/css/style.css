@@ -24,7 +24,7 @@
 
 };
 
-/* Needed to make navbar horizontal */
+/* Needed for padding and navbar text spacing */
 #navbar-text{
     color: white;
     text-decoration: none;
@@ -46,21 +46,16 @@ li{
 }
 
 
-
-li a:hover {
-    border-top-left-radius: 2pt;
-    border-bottom-left-radius: 2pt;
-    border-top-right-radius: 2pt;
-    border-bottom-right-radius: 2pt;
-    border-top: 1.5pt solid whitesmoke;
-    border-bottom:1.5pt solid whitesmoke;
-    border-left: 1.5pt solid whitesmoke;
-    border-right: 1.5pt solid whitesmoke;
-    text-decoration: none;
-    padding-left: 1pt;
-  }
-
 body{
     background-color: #36454f;
 }
+/* Footer content */
+footer{
+    background-color: 	#778BA5;
 
+}
+
+#copyright{
+    text-align: center;
+}
+.
