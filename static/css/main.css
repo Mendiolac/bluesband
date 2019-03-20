@@ -1,0 +1,104 @@
+/* This creates a full screen dark overlay, but it also covers the rotating #loader and makes the page title hard to read. */
+#loader-wrapper .loader-section {
+    position: fixed;
+    top: 0;
+    width: 51%;
+    height: 100%;
+    background: #222222;
+    z-index: 1000;
+}
+ 
+#loader-wrapper .loader-section.section-left {
+    left: 0;
+}
+ 
+#loader-wrapper .loader-section.section-right {
+    right: 0;
+}
+
+/* Tweaks the z-index of #loader to bring it above the dark overlay and change the color of the heading to light grey. */
+#loader {
+    z-index: 1001; /* anything higher than z-index: 1000 of .loader-section */
+}
+h1 {
+    color: #EEEEEE;
+}
+
+/* Centering the content container and setting a width and padding-bottom. */
+#content {
+    margin: 0 auto;
+    padding-bottom: 50px;
+    width: 80%;
+    max-width: 978px;
+}
+
+/* Loaded */
+.loaded #loader-wrapper .loader-section.section-left {
+    -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateX(-100%);  /* IE 9 */
+    transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+}
+ 
+.loaded #loader-wrapper .loader-section.section-right {
+    -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateX(100%);  /* IE 9 */
+    transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+}
+
+/* Fade the preloader out at the same time. */
+.loaded #loader {
+    opacity: 0;
+}
+
+/* Changing the #loader opacity to 0  will make the #content not accessible, 
+because the #loader container is still sitting on top of our content. */
+.loaded #loader-wrapper {
+    visibility: hidden;
+}
+
+/* Fade out the preloader first, by adding CSS3 transitions to #loader. */
+.loaded #loader {
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out; 
+            transition: all 0.3s ease-out;
+}
+
+/* Animate both sides out of a view with a slight 0.3s delay. 
+The first 0.3s defines animation duration and the second 0.3s defines the animations delay.*/
+.loaded #loader-wrapper .loader-section.section-right,
+.loaded #loader-wrapper .loader-section.section-left {
+ 
+    -webkit-transition: all 0.3s 0.3s ease-out; 
+            transition: all 0.3s 0.3s ease-out;
+}
+
+/* Animate the whole #loader-wrapper out of the view using transform: translateY(-100%). */
+.loaded #loader-wrapper {
+    -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+            transform: translateY(-100%);
+
+    -webkit-transition: all 0.3s 0.6s ease-out; 
+            transition: all 0.3s 0.6s ease-out;
+}
+
+/* To get even slicker animation for the left and right overlay we can 
+ change the easing from ease-out to cubic-bezier and adjust the timing to 0.7s. */
+ .loaded #loader-wrapper .loader-section.section-right,
+ .loaded #loader-wrapper .loader-section.section-left {
+  
+     -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000); 
+                 transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+ }
+
+ /* Changing the duration of left and right section transition also means 
+ that we have to adjust the delay on .loaded #loader-wrapper animation to 1s. */
+ .loaded #loader-wrapper {
+    -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+            transform: translateY(-100%);
+
+    -webkit-transition: all 0.3s 1s ease-out; 
+            transition: all 0.3s 1s ease-out;
+}
+

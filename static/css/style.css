@@ -3,15 +3,8 @@
   
   }
 
-  
-/* logo on navbar */
-.img-circle{
-    border-radius: 50%;
-    margin-bottom: 2%;
-    
-}
 
-/* navbar content */
+/* Navbar text and style */
 #navbar{
    background-color: rgb(19, 19, 68);
    text-align: center;
@@ -58,4 +51,4 @@ footer{
 #copyright{
     text-align: center;
 }
-.
+

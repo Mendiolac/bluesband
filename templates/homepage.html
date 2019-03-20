@@ -19,23 +19,23 @@
     <!-- Start of navbar -->
    
       <!-- Navbar row -->
-      <nav class="row">
-        <!-- Navbar column -->
-        <div class="col-8">
-            <ul class="nav flex-column grey lighten-4 py-4" style="list-style: none">
-              <li class="nav-item">
-                <a class="nav-link active" href="homepage.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-            </ul>
-          </div>
-          <!-- End of navbar column -->        
-        </nav>
+    <div class="row">
+      <!-- Navbar column -->
+      <div class="col-8">
+          <ul class="nav flex-column grey lighten-4 py-4" style="list-style: none">
+            <li class="nav-item">
+              <a class="nav-link active" href="homepage.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <!-- End of navbar column -->        
+    </div>
   
 
     <!-- Footer -->
@@ -116,7 +116,7 @@
     <!-- Footer Elements -->
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3" id="copyright">© 2018 Copyright:
+    <div class="footer-copyright text-center py-3" id="copyright">© 2019 Copyright:
       <a href="https://www.linkedin.com/in/mendiolac/"> Camille Mendiola</a>
     </div>
     <!-- Copyright -->
@@ -134,7 +134,7 @@
     var angle = 0;
  function galleryspin(sign) { 
  spinner = document.querySelector("#spinner");
- if (!sign) { angle = angle + 90; } else { angle = angle - 90; }
+ if (!sign) { angle = angle + 60; } else { angle = angle - 60; }
  spinner.setAttribute("style","-webkit-transform: rotateY("+ angle +"deg); -moz-transform: rotateY("+ angle +"deg); transform: rotateY("+ angle +"deg);");
  }
 </script>
