@@ -1,14 +1,106 @@
-/* This creates a full screen dark overlay, but it also covers the rotating #loader and makes the page title hard to read. */
-#loader-wrapper .loader-section {
+p{
+    line-height: 1.33em;
+    color: #7e7e7e;
+}
+.entry-title{
+    color: #eeeeee;
+    text-align: center;
+}
+
+/* Beginning of Animation */
+#loader-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    z-index: 1000;
+
+}
+ 
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width:150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: darkblue;
+
+    -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+    z-index: 1001;
+}
+
+#loader:before{
+    content:"";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom:5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #e74c3c;
+
+    -webkit-animation: spin 3s linear infinite;
+        animation: spin 3
+        s linear infinite;
+}
+
+#loader:after{
+    content:"";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom:15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #f9c22f;
+
+    -webkit-animation: spin 1.5s linear infinite;
+        animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin{
+    0% {-webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {-webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin{
+    0% {-webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {-webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+ /* End of animation */
+  /* This creates a full screen dark overlay, but it also covers the rotating #loader and makes the page title hard to read. */
+ #loader-wrapper .loader-section{
     position: fixed;
     top: 0;
     width: 51%;
     height: 100%;
-    background: #222222;
+    background: #222;
     z-index: 1000;
-}
- 
-#loader-wrapper .loader-section.section-left {
+ }
+
+ #loader-wrapper .loader-section.section-left {
     left: 0;
 }
  
@@ -16,23 +108,7 @@
     right: 0;
 }
 
-/* Tweaks the z-index of #loader to bring it above the dark overlay and change the color of the heading to light grey. */
-#loader {
-    z-index: 1001; /* anything higher than z-index: 1000 of .loader-section */
-}
-h1 {
-    color: #EEEEEE;
-}
-
-/* Centering the content container and setting a width and padding-bottom. */
-#content {
-    margin: 0 auto;
-    padding-bottom: 50px;
-    width: 80%;
-    max-width: 978px;
-}
-
-/* Loaded */
+/* Loaded Styles */
 .loaded #loader-wrapper .loader-section.section-left {
     -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
     -ms-transform: translateX(-100%);  /* IE 9 */
@@ -101,4 +177,3 @@ The first 0.3s defines animation duration and the second 0.3s defines the animat
     -webkit-transition: all 0.3s 1s ease-out; 
             transition: all 0.3s 1s ease-out;
 }
-

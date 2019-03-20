@@ -5,31 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="UTF-8">
     <title>By the Blood</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.1/css/mdb.min.css" />
     <link rel="stylesheet" href="../static/css/main.css">
-    
+  
+    <style type="text/css">
+      .back-link a{
+        color:#4ca340;
+        text-decoration: none;
+        border-bottom: 1px #4ca340 solid;
+      }
+      .back-link a:hover,
+      .back-link a:focus {
+        color: #408536;
+        text-decoration: none;
+        border-bottom: 1px #408536 solid;
+      }
+      h1 {
+        height: 100%;
+        margin: 0%;
+        font-size: 14px;
+        font-family: 'Open Sans', sans-serif;
+        color: #1c1d1e;
+        font-size: 32px;
+        margin-bottom: 3px;
+
+      }
+      .entry-header {
+        text-align: cneter;
+        margin: 0 auto 50 px auto;
+        width: 978px;
+        position: relative;
+        z-index: 1001;
+
+      }
+    #demo-content {
+      padding-top: 100px;
+    }
+    </style>
   </head>
 
 
-  <body>
-        <div id="loader-wrapper">
+  <body class="demo loading">
 
-            <div id="loader"></div>
-            <div class="loader-section section-left"></div>
-            <div class="loader-section section-right"></div>
-             
-        </div>
-        <!-- Adding some default content to the page so we have something to reveal. -->
-        <div id="content">
+    <div id="demo-content">
+      <header class="entry-header">
+          <h1 class="entry-title">Demo Loading Page</h1>
+      </header>
 
-            <h2>This is our page title</h2>
-            <p>Lorem ipsum dolor sit amet.</p>
+      <div id="loader-wrapper">
 
-        </div>
+          <div id="loader"></div>
+          <div class="loader-section section-left"></div>
+          <div class="loader-section section-right"></div>
+           
+      </div>
+      <!-- Adding some default content to the page so we have something to reveal. -->
+      <div id="content">
 
-        <!-- MDB Javascript  -->
+          <h2>This is our page title</h2>
+          <p>Lorem ipsum dolor sit amet.</p>
+
+      </div> 
+
+    </div>
+        
+
+        <!-- Javascript and jQuery  -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.1/js/mdb.min.js"></script>
         <script type="text/javascript" href="../static/javascript/main.js"></script>
   </body>
