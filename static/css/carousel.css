@@ -82,4 +82,4 @@ div#carousel {
     margin-top: -6rem; 
     border-bottom: none; 
     line-height: 0; }
-  div#carousel ~ span:hover { color: #888; cursor: pointer; }
+  div#carousel ~ span:hover { color: rgb(8, 8, 8); cursor: pointer; }

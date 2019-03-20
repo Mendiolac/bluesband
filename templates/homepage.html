@@ -5,17 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="UTF-8">
     <title>By the Blood of Jesus</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.1/css/mdb.min.css" />
     <link rel="stylesheet" href="../static/css/style.css">
     <link rel="stylesheet" href="../static/css/carousel.css"> 
-
+    <link rel="stylesheet" href="../static/css/main.css">
 
 
   </head>
 
-  <body>
+  <body class="demo loading">
+    <!-- Loader Page -->
+    <div id="demo-content">
+  
+      <!-- <div id="loader-wrapper">
+
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+            
+      </div>
+       Adding the default content to the page. -->
+      <div id="content"> -->
     <!-- Start of navbar -->
    
       <!-- Navbar row -->
@@ -102,9 +113,9 @@
                   </div>
               </div>
 
+            </div>
+         
           </div>
-        </div>
-
 
         </div>
         <!--Grid column-->
@@ -126,32 +137,34 @@
 
 
 
-  <!-- Bootstrap java tags -->
-  
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.1/js/mdb.min.js"></script>
-  <!-- carousel -->
-<script>
-    var angle = 0;
- function galleryspin(sign) { 
- spinner = document.querySelector("#spinner");
- if (!sign) { angle = angle + 60; } else { angle = angle - 60; }
- spinner.setAttribute("style","-webkit-transform: rotateY("+ angle +"deg); -moz-transform: rotateY("+ angle +"deg); transform: rotateY("+ angle +"deg);");
- }
-</script>
+      <!-- Bootstrap java tag -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.1/js/mdb.min.js"></script>
+      <!-- Loading Page java tag -->
+      <script type="text/javascript" href="../static/javascript/main.js"></script>
 
-<script>
-  $(document).ready(function() {
-          // Transition effect for navbar 
-          $(window).scroll(function() {
-            // checks if window is scrolled more than 500px, adds/removes solid class
-            if($(this).scrollTop() > 370) { 
-                $('.navbar').addClass('solid');
-            } else {
-                $('.navbar').removeClass('solid');
-            }
-          });
-  });
-</script>
+      <!-- Carousel -->
+      <script>
+          var angle = 0;
+      function galleryspin(sign) { 
+      spinner = document.querySelector("#spinner");
+      if (!sign) { angle = angle + 60; } else { angle = angle - 60; }
+      spinner.setAttribute("style","-webkit-transform: rotateY("+ angle +"deg); -moz-transform: rotateY("+ angle +"deg); transform: rotateY("+ angle +"deg);");
+      }
+      </script>
+
+    <script>
+      $(document).ready(function() {
+              // Transition effect for navbar 
+              $(window).scroll(function() {
+                // checks if window is scrolled more than 500px, adds/removes solid class
+                if($(this).scrollTop() > 370) { 
+                    $('.navbar').addClass('solid');
+                } else {
+                    $('.navbar').removeClass('solid');
+                }
+              });
+      });
+    </script>
   
   
   </body>
