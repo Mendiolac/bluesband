@@ -14,15 +14,13 @@
    padding-top: 0.25pt;
    font-family: 'Optima', sans-serif;
    
-
 };
 
 /* Needed for padding and navbar text spacing */
-#navbar-text{
-    color: white;
+.nav-link active{
+    color: black;
     text-decoration: none;
-  
-    
+    font-style: bold;
 
 }
 
